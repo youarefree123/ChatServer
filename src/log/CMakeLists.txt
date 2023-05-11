@@ -14,7 +14,7 @@ message( build log )
 
 add_library(
         log 
-        SHARED
+        STATIC
         ${SRC_DIR_LIST}									
 ) 
 

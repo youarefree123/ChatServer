@@ -19,7 +19,7 @@ message(message : LIBRARY_OUTPUT_PATH =  ${LIBRARY_OUTPUT_PATH} )
 
 # 指定头文件搜索目录
 INCLUDE_DIRECTORIES(
-    ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/spdlog/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/
     ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
@@ -48,10 +48,8 @@ INCLUDE_DIRECTORIES(
 
 
 add_subdirectory ("src") # 加载子目录
-
-
-# add_subdirectory ("net") # 指定 编译子目录
 add_subdirectory ("example") # 指定 编译子目录
+add_subdirectory ("test") # 指定 编译子目录
 
 
 
