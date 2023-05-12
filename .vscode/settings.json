@@ -59,7 +59,8 @@
     "thread": "cpp",
     "cinttypes": "cpp",
     "typeinfo": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "internet": "cpp"
 },
   "cmake.sourceDirectory": "${workspaceFolder}/.",
   "C_Cpp.errorSquiggles": "Disabled"

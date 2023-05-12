@@ -141,7 +141,7 @@ private:
     MessageCallback msg_cb_; /* 有读写消息时的回调 */
     WriteCompletedCallback written_cb_; /* 消息发送完成的回调 */
     CloseCallback close_cb_; /* 关闭连接对应的回调 */
-    HighWaterMarkCallback high_water_mark_cb_; /* 超过高水位的回调 */
+    HighWaterMarkCallback high_water_mark_cb_; /* 超过高水位的回调,目前好像没有地方可以设置他，后期需要加一下 */
 
     size_t high_water_mark_; /* 高水位线 */
 
