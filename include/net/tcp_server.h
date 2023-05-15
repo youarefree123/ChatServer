@@ -13,6 +13,7 @@
 #include "net/eventloop_thread_pool.h"
 
 using Buffer = UnlimitedBuffer;
+using ConnctionMap = std::unordered_map< std::string, TcpConnectionPtr >;
 
 /*  给用户使用的类，所以不用前置声明，直接导入头文件，后续用户使用的时候就不需要再导相应的包了 
     核心类，管理Acceptor和所有conn
@@ -22,7 +23,7 @@ class TcpServer
 public:
     // EvenetLoopThread 的 thread_func() 调用
     using ThreadInitCallback = std::function<void( EventLoop* )>;
-   
+    
 
     // 是否重用端口
     enum Option {
@@ -39,6 +40,7 @@ public:
     const std::string& ip_port() const { return ip_port_; }
     const std::string& name() const { return name_; }
     EventLoop* loop() const { return loop_; }
+    const ConnctionMap& conns() const { return conns_; } 
 
     void set_thread_num( int num_threads ); 
 
@@ -72,7 +74,7 @@ public:
 
 private:
 
-    using ConnctionMap = std::unordered_map< std::string, TcpConnectionPtr >;
+    
 
     /// Not thread safe, but in loop
     void NewConnection(int sockfd, const InetAddress& peerAddr);

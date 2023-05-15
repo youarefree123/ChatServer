@@ -31,7 +31,7 @@ public:
         );
 
         // 设置合适的loop线程数量 loopthread
-        server_.set_thread_num(0);
+        server_.set_thread_num(2);
     }
     void Start()
     {

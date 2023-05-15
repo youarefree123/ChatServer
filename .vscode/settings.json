@@ -60,7 +60,10 @@
     "cinttypes": "cpp",
     "typeinfo": "cpp",
     "variant": "cpp",
-    "internet": "cpp"
+    "internet": "cpp",
+    "any": "cpp",
+    "forward_list": "cpp",
+    "valarray": "cpp"
 },
   "cmake.sourceDirectory": "${workspaceFolder}/.",
   "C_Cpp.errorSquiggles": "Disabled"

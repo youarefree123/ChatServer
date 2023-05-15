@@ -1,4 +1,5 @@
 #include "server/chat_server.h"
+#include "log.h"
 int main()
 {
     ONLY_TO_CONSOLE; LOGINIT(); LOG_LEVEL_TRACE;
